@@ -1,5 +1,10 @@
+import { FormPrincipal } from '../../components/FormPrincipal';
+import * as Styled from './styles';
+
 export const Home = () => {
   return (
-    <div>Funko on Sale</div>
+    <Styled.Container>
+      <FormPrincipal />
+    </Styled.Container>
   );
 }

@@ -1,9 +1,16 @@
 import React from 'react';
+import * as Styled from './styles';
+import { Link } from 'react-router-dom';
 
 export const PageNotFound = () => {
     return (
-        <div>
-            Erro 404! Página Não encontrada :/
-        </div>
+        <Styled.Container>
+            <div>
+                Erro 404! Página Não encontrada :/
+            </div>
+            <nav>
+                <Link to="/">Página Principal</Link>
+            </nav>
+        </Styled.Container>
     );
 };

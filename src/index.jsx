@@ -17,7 +17,6 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastrar-usuario" element={<CadastroUser />} />
-        <Route path="/cadastrar-funko" element={<CadastroFunko />} />
         <Route path="/listar-funko" element={<ListarFunkos />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
