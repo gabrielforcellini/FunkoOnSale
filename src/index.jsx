@@ -10,6 +10,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserProvider } from './context/UserContext';
+import { Message } from './components/Message';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <Navbar />
+        <Message />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
