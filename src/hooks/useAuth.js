@@ -2,13 +2,26 @@
 import { api } from '../services/api';
 
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useFlashMessage from './useFlashMessage';
 
-//api
 
+//api
 export default function useAuth() {
+  const [authenticated, setAuthenticated] = useState(false);
   const { setFlashMessage } = useFlashMessage();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`
+      setAuthenticated(true);
+    }
+  }, []);
+
   const register = async (user) => {
     let msgText = "Cadastro Realizado com sucesso!";
     let msgType = "success";
@@ -23,7 +36,15 @@ export default function useAuth() {
     }
 
     setFlashMessage(msgText, msgType);
-  }
+  };
 
-  return { register }
+  const authUser = async (data) => {
+    setAuthenticated(true);
+
+    localStorage.setItem('token', JSON.stringify(data.token));
+
+    navigate("/cadastrar-funko");
+  };
+
+  return { authenticated, register };
 }

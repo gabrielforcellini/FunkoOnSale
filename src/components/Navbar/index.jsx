@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Styled from './styles';
-import Logo  from '../../images/funko-logo-principal.png';
+import Logo from '../../images/funko-logo-principal.png';
+
+import { Context } from '../../context/UserContext';
+import { useContext } from 'react';
 
 export const Navbar = () => {
+    const { authenticated } = useContext(Context);
+
     return (
         <Styled.Container>
             <Styled.Logo>
@@ -14,12 +19,16 @@ export const Navbar = () => {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link to="/cadastrar-usuario">Cadastrar-se</Link>
-                </li>
+                {authenticated ? (<p>Logado</p>) : (
+                    <>
+                        <li>
+                            <Link to="/login">Login</Link>
+                        </li>
+                        <li>
+                            <Link to="/cadastrar-usuario">Cadastrar-se</Link>
+                        </li>
+                    </>
+                )}
                 <li>
                     <Link to="/listar-funko">Loja</Link>
                 </li>
