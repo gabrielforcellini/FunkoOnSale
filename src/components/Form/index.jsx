@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Field } from '../Field';
 import * as Styled from './styles';
+import { Context } from '../../context/UserContext';
+import { useContext } from 'react';
 
 export const Form = () => {
     const [user, setUser] = useState({});
+    const { register } = useContext(Context);
 
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
@@ -12,7 +15,7 @@ export const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
+        register(user);
     }
 
     return (
