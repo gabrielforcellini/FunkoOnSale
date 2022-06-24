@@ -1,11 +1,12 @@
 import React from 'react';
-import { Form } from '../../components/Form';
 import * as Styled from './styles';
 
-export const CadastroUser = () => {
+export const Footer = () => {
     return (
         <Styled.Container>
-            <Form />
+            <p>
+                <span className='bold'>Funko on Sale</span> &copy; 2021
+            </p>
         </Styled.Container>
     );
 };

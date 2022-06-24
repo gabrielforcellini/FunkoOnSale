@@ -5,14 +5,16 @@ import { Home } from './templates/Home';
 import { PageNotFound } from './templates/PageNotFound';
 import { Login } from './templates/Login';
 import { CadastroUser } from './templates/CadastroUser';
-import { CadastroFunko } from './templates/CadastroFunko';
 import { ListarFunkos } from './templates/ListarFunkos';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -20,6 +22,7 @@ root.render(
         <Route path="/listar-funko" element={<ListarFunkos />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
