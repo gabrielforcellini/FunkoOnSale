@@ -23,7 +23,7 @@ export default function useAuth() {
   }, []);
 
   const register = async (user) => {
-    let msgText = "Cadastro Realizado com sucesso!";
+    let msgText = "User Registered!";
     let msgType = "success";
     try {
       const data = await api.post('/user/register', user).then((response) => {
@@ -31,7 +31,7 @@ export default function useAuth() {
       })
       authUser(data);
     } catch (error) {
-      msgText = error.response.data.message;
+      msgText = error.response.data.error;
       msgType = 'error';
     }
 
