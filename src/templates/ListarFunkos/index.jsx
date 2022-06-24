@@ -60,7 +60,6 @@ export const ListarFunkos = () => {
 
     return (
         <Styled.Container>
-            <img src={imagemLogo} alt="logo escrito funko em azul" width={450} height={175} className="flutuante"/>
             <TextInputSearch searchValue={Input} handleChange={handleChange} onClick={btnClick}/>
 
             {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}

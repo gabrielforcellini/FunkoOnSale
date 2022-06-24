@@ -29,7 +29,7 @@ export default function useAuth() {
       const data = await api.post('/user/register', user).then((response) => {
         return response.data
       })
-      console.log(data);
+      authUser(data);
     } catch (error) {
       msgText = error.response.data.message;
       msgType = 'error';
