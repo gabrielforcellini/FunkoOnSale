@@ -2,9 +2,11 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   ${() => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 86vh;
-    padding: 1em 2em 3em;
-    max-width: 1200px;
-    margin: 0 auto;
+    background: #212529;
+    color: white;
   `}
 `;

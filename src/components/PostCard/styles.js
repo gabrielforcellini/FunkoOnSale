@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${() => css`
-    background: rgba(255, 255, 255, 0.2);
-    color: greenyellow;
+    background-color: rgba(39, 174, 245, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: transform 100ms ease-in-out;

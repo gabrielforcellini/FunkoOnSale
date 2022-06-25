@@ -4,9 +4,10 @@ export const Container = styled.section`
   ${() => css`
     max-width: 300px;
     margin: 0 auto;
-    background-color: transparent;
+    background-color: #FFF;
     border-radius: 15px;
-
+    background: transparent;
+    
     input[type='submit']{
       border-radius 8px;
       background-color: #25B456;
@@ -19,7 +20,7 @@ export const Container = styled.section`
       font-size: 1.1em;
       font-weight: bold; 
     }
-
+    
     input[type='submit']:hover{
       background-color: #1C8A42;
     }
@@ -27,14 +28,16 @@ export const Container = styled.section`
     p{
       margin-top: 1em;
     }
-
+    
     p a{
       color: #16479d;
       font-weight: bold;
     }
-    
+
     h1{
-      margin-bottom: 1.5em;
+      margin-top: 3em;
+      font-size: 2em;
     }
   `}
 `;
+    

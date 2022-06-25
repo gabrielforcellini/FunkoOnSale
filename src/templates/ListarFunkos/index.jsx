@@ -15,7 +15,7 @@ export const ListarFunkos = () => {
     const [posts, setPosts] = useState([]);
     const [allPosts, setAllPosts] = useState([]);
     const [page, setPage] = useState(0);
-    const [postsPerPage] = useState(10);
+    const [postsPerPage] = useState(5);
     const [searchValue, setSearchValue] = useState('');
     const [Input, setInput] = useState('');
 
@@ -55,7 +55,7 @@ export const ListarFunkos = () => {
     const noMorePosts = page + postsPerPage >= allPosts.length;
 
     const filteredPosts = searchValue ? allPosts.filter((post) => {
-        return post.name.toLowerCase().includes(searchValue.toLowerCase());
+        return post.title.toLowerCase().includes(searchValue.toLowerCase());
     }) : posts;
 
     return (
