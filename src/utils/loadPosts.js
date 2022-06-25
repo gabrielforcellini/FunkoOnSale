@@ -5,7 +5,11 @@ export const loadPosts = async () => {
 
   const postsJson = await postsResponse.data.funkos;
 
-  const Posts = postsJson.map((post) => {
+  const posts = postsJson.filter((post) => {
+    return post.sale;
+  });
+
+  const Posts = posts.map((post) => {
     return { ...post };
   });
 

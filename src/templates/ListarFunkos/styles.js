@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 
 export const Container = styled.div`
   ${() => css`
-    min-height: 100vh;
+    min-height: 86vh;
     display: flex;
     align-items: center;
     justify-content: center;
