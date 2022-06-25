@@ -9,8 +9,9 @@ export const Posts = ({ posts = [] }) => {
           key={post._id}
           title={post.title}
           body={
-            post.description + ' - ' + (post.sale === true ? 'Disponível' : 'Esgotado') + ' - ' + post.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            post.description
           }
+          price={post.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
           cover={post.imageUrl}
         />
       ))}

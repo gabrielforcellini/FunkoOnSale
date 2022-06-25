@@ -4,7 +4,6 @@ export const Container = styled.button`
   ${() => css`
     min-width: 10rem;
     background: rgba(39, 174, 245, 0.8);
-    border: solid 2px #212529;
     padding: 15px 30px;
     border-radius: 8px;
     color: #212529;

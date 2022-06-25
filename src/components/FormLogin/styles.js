@@ -26,11 +26,12 @@ export const Container = styled.section`
     }
     
     p{
+      color: white;
       margin-top: 1em;
     }
     
     p a{
-      color: #16479d;
+      color: rgba(39, 174, 245, 0.8);
       font-weight: bold;
     }
 

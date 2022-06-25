@@ -22,10 +22,11 @@ export const Container = styled.nav`
         padding: .5em .8em;
         border-radius: 5px;
         color: white;
+        background: transparent;
     }
 
     li:hover {
-      background: #212529;
+      background: rgba(39, 174, 245, 0.8);;
     }
   `}
 `;

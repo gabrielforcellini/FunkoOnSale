@@ -29,7 +29,7 @@ export const Container = styled.section`
     }
 
     p a{
-      color: #16479d;
+      color: rgba(39, 174, 245, 0.8);;
       font-weight: bold;
     }
     

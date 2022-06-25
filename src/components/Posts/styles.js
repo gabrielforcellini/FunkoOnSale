@@ -9,5 +9,13 @@ export const Container = styled.div`
     flex-direction: row;
     padding: 1rem;
     gap: 30px;
+
+    h2{
+      color: rgba(39, 174, 245, 0.8);
+    }
+
+    h3{
+      color: greenyellow;
+    }
   `}
 `;
