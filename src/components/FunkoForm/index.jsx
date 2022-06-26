@@ -6,7 +6,6 @@ export const FunkoForm = ({ handleSubmit }) => {
     const [funko, setFunko] = useState({});
 
     const handleChange = (e) => {
-        console.log(e.target.name);
         setFunko({ ...funko, [e.target.name]: e.target.value });
     };
     

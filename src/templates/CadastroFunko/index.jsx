@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
 import useFlashMessage from '../../hooks/useFlashMessage';
@@ -11,19 +11,17 @@ export const CadastroFunko = () => {
     const navigate = useNavigate();
 
     const registerFunko = async(funko) => {
-        let msgText = "Funko Registered!";
         let msgType = "success";
-        try {
-            await api.post('/funko/create', funko, {Authorization: `Bearer ${JSON.parse(token)}`})
-            .then((response) => {
-                return response.data
-            });
-        } catch (error) {
-            msgText = error.response.data.error;
+        const data = await api.post("/funko/create", funko, { Authorization: `Bearer ${JSON.parse(token)}`})
+        .then((response) => {
+            return response.data;
+        })
+        .catch((err) => {
             msgType = 'error';
-        }
+            return err.response.data;
+        })
 
-        setFlashMessage(msgText, msgType);
+        setFlashMessage(data.message, msgType);
         if(msgType !== 'error'){
             navigate("/listar-funko");
         }
