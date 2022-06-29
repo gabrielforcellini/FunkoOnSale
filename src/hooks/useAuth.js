@@ -31,7 +31,7 @@ export default function useAuth() {
       })
       authUser(data);
     } catch (error) {
-      msgText = error.response.data.error;
+      msgText = error.response.data.message;
       msgType = 'error';
     }
 
@@ -57,7 +57,7 @@ export default function useAuth() {
 
       await authUser(data);
     } catch (error) {
-      msgText = error.response.data.error;
+      msgText = error.response.data.message;
       msgType = 'error';
     }
 
@@ -74,7 +74,7 @@ export default function useAuth() {
     api.defaults.headers.Authorization = undefined;
     navigate("/");
 
-    setFlashMessage(msgText, msgType); 
+    setFlashMessage(msgText, msgType);
   }
 
   return { authenticated, register, logout, login };

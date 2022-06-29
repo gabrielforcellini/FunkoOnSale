@@ -6,7 +6,7 @@ export const TextInputSearch = ({ searchValue, handleChange, onClick }) => {
     <Styled.Container>
       <input type="text" value={searchValue} onChange={handleChange} placeholder="Pesquise por nome" />
       <Styled.ButtonSearch>
-        <FiSearch size={25} color="#ffffff" onClick={onClick}/>
+        <FiSearch size={25} color="#ffffff" onClick={onClick} />
       </Styled.ButtonSearch>
     </Styled.Container>
   );

@@ -9,6 +9,7 @@ import { TextInputSearch } from '../../components/TextInputSearch';
 import { Button } from '../../components/Button';
 import { loadPosts } from '../../utils/loadPosts';
 import { Posts } from '../../components/Posts';
+import useFlashMessage from '../../hooks/useFlashMessage';
 
 export const ListarFunkos = () => {
     //delcaração dos estados
@@ -18,6 +19,7 @@ export const ListarFunkos = () => {
     const [postsPerPage] = useState(5);
     const [searchValue, setSearchValue] = useState('');
     const [Input, setInput] = useState('');
+    const { setFlashMessage } = useFlashMessage();
 
     const handlePosts = useCallback(async (page, postsPerPage) => {
         const Posts = await loadPosts();
@@ -46,7 +48,7 @@ export const ListarFunkos = () => {
 
     const btnClick = () => {
         if (Input === "") {
-            alert("Preencha o campo para pesquisar!");
+            setFlashMessage('Fill in the field to search!', 'error');
             return;
         }
         setSearchValue(Input);
@@ -60,7 +62,7 @@ export const ListarFunkos = () => {
 
     return (
         <Styled.Container>
-            <TextInputSearch searchValue={Input} handleChange={handleChange} onClick={btnClick}/>
+            <TextInputSearch searchValue={Input} handleChange={handleChange} onClick={btnClick} />
 
             {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
 

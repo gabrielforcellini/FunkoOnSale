@@ -9,5 +9,6 @@ export const Container = styled.footer`
     background-color: rgba(33,37,41,0.73);
     color: white;
     border-top: 1px solid #666;
+    padding-top: 1em;
   `}
 `;

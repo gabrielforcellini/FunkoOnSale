@@ -8,9 +8,9 @@ export const FunkoForm = ({ handleSubmit }) => {
     const handleChange = (e) => {
         setFunko({ ...funko, [e.target.name]: e.target.value });
     };
-    
+
     const handleNumberChange = (e) => {
-        if(e.target.value <= 0){
+        if (e.target.value <= 0) {
             e.target.value = 0;
         }
         setFunko({ ...funko, price: e.target.value });
@@ -24,10 +24,10 @@ export const FunkoForm = ({ handleSubmit }) => {
     return (
         <Styled.Container>
             <form onSubmit={submit}>
-                <Field text="Titulo" type="text" name="title" placeholder="Informe o Titulo do post" handleOnChange={handleChange} />
-                <Field text="Descrição" type="text" name="description" placeholder="Informe a url da imagem" handleOnChange={handleChange} />
-                <Field text="Preço" type="number" name="price" placeholder="Informe o preço" handleOnChange={handleNumberChange} />
-                <Field text="Url Imagem" type="text" name="imageUrl" placeholder="Informe a url da imagem" handleOnChange={handleChange} />
+                <Field text="Titulo" type="text" name="title" placeholder="Informe o Titulo do funko" handleOnChange={handleChange} />
+                <Field text="Descrição" type="text" name="description" placeholder="Informe a descrição do funko" handleOnChange={handleChange} />
+                <Field text="Preço" type="number" name="price" placeholder="Informe o preço do funko" handleOnChange={handleNumberChange} />
+                <Field text="Url Imagem" type="text" name="imageUrl" placeholder="Informe a url da imagem do funko" handleOnChange={handleChange} />
                 <input type="submit" value="Cadastrar Funko" />
             </form>
         </Styled.Container>
