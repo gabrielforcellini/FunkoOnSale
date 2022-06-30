@@ -1,10 +1,10 @@
-import * as Styled from './styles';
 import React, { useState } from 'react';
+import * as Styled from './styles';
 import { useNavigate } from 'react-router-dom';
+
 import { api } from '../../services/api';
 import useFlashMessage from '../../hooks/useFlashMessage';
 import { FunkoForm } from '../../components/FunkoForm';
-import { useEffect } from 'react';
 
 export const CadastroFunko = () => {
     const [token] = useState(localStorage.getItem('token') || '');

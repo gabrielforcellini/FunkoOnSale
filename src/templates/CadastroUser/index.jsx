@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form } from '../../components/Form';
 import * as Styled from './styles';
+
+import { Form } from '../../components/Form';
 
 export const CadastroUser = () => {
     return (

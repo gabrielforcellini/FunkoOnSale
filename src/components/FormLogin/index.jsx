@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
-import * as Styled from './styles';
-
 import { Link } from 'react-router-dom';
+import * as Styled from './styles';
 
 //contexts
 import { Context } from '../../context/UserContext';

@@ -1,5 +1,5 @@
-import imagemLogo from '../../images/funko-logo-principal.png';
 import * as Styled from './styles';
+import imagemLogo from '../../images/funko-logo-principal.png';
 
 export const FormPrincipal = () => {
   return (

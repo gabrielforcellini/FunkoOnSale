@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as Styled from './styles';
+
 import { Field } from '../Field';
 
 export const FunkoForm = ({ handleSubmit }) => {

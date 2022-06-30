@@ -1,9 +1,5 @@
+import React, { useState, useEffect, useCallback } from 'react';
 import * as Styled from './styles';
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import { useCallback } from 'react';
-
-import imagemLogo from '../../images/funko-logo-principal.png';
 
 import { TextInputSearch } from '../../components/TextInputSearch';
 import { Button } from '../../components/Button';

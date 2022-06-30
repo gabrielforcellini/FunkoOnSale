@@ -1,4 +1,5 @@
 import * as Styled from './styles';
+
 import { PostCard } from '../PostCard';
 
 export const Posts = ({ posts = [] }) => {

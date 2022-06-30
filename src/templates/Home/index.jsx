@@ -1,5 +1,6 @@
-import { FormPrincipal } from '../../components/FormPrincipal';
 import * as Styled from './styles';
+
+import { FormPrincipal } from '../../components/FormPrincipal';
 
 export const Home = () => {
   return (

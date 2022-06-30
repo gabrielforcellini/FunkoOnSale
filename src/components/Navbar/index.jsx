@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Styled from './styles';
+
 import Logo from '../../images/funko-logo-principal.png';
 
 import { Context } from '../../context/UserContext';

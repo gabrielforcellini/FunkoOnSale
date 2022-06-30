@@ -1,10 +1,9 @@
 //hook para autenticar usuario
-import { api } from '../services/api';
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useFlashMessage from './useFlashMessage';
 
+import { api } from '../services/api';
+import useFlashMessage from './useFlashMessage';
 
 //api
 export default function useAuth() {
