@@ -11,10 +11,10 @@ import { Field } from '../../components/Field';
 export const FormLogin = () => {
 
     const [user, setUser] = useState({});
-    const { login } =useContext(Context);
+    const { login } = useContext(Context);
 
     const handleChange = (e) => {
-        setUser({ ...user, [e.target.name]: e.target.value});
+        setUser({ ...user, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
