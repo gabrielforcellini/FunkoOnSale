@@ -25,27 +25,30 @@ export const Navbar = () => {
                 <li>
                     <Link to="/listar-funko">Loja</Link>
                 </li>
-                {authenticated 
-                ? (
-                    <>
-                        <li>
-                            <Link to="/cadastrar-funko">Cadastrar um Funko</Link>
-                        </li>
-                        <li onClick={logout}>
-                            Sair
-                        </li>
-                    </>
-                ) 
-                : (
-                    <>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link to="/cadastrar-usuario">Cadastrar-se</Link>
-                        </li>
-                    </>
-                )}
+                {authenticated
+                    ? (
+                        <>
+                            <li>
+                                <Link to="/cadastrar-funko">Cadastrar um Funko</Link>
+                            </li>
+                            <li>
+                                <Link to="/minha-conta">Minha Conta</Link>
+                            </li>
+                            <li onClick={logout}>
+                                Sair
+                            </li>
+                        </>
+                    )
+                    : (
+                        <>
+                            <li>
+                                <Link to="/login">Login</Link>
+                            </li>
+                            <li>
+                                <Link to="/cadastrar-usuario">Cadastrar-se</Link>
+                            </li>
+                        </>
+                    )}
             </ul>
         </Styled.Container>
     );

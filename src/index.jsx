@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserProvider } from './context/UserContext';
 import { Message } from './components/Message';
 import { CadastroFunko } from './templates/CadastroFunko';
+import { MinhaConta } from './templates/MinhaConta';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
           <Route path="/cadastrar-usuario" element={<CadastroUser />} />
           <Route path="/cadastrar-funko" element={<CadastroFunko />} />
           <Route path="/listar-funko" element={<ListarFunkos />} />
+          <Route path="/minha-conta" element={<MinhaConta />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
